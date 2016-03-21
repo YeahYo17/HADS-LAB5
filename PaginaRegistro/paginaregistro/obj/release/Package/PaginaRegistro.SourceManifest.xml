@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\Universidad\2015.2016\HADS\GitHub\HADS-LAB4\PaginaRegistro\PaginaRegistro\obj\Release\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="D:\Universidad\2015.2016\HADS\GitHub\HADS-LAB4\PaginaRegistro\PaginaRegistro\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="D:\Universidad\2015.2016\HADS\GitHub\HADS-LAB4\PaginaRegistro\PaginaRegistro\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
