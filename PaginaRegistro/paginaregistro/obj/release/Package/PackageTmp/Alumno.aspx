@@ -19,18 +19,20 @@
     
         <strong><span class="auto-style1">Gestion Web de Tareas-Dedicacion - Alumnos</span></strong><br />
         <br />
-        <asp:Panel ID="Panel1" runat="server" Height="318px" style="text-align: center; background-color: #CCCCFF" Width="170px">
+        <asp:Panel ID="Panel1" runat="server" Height="400px" style="text-align: center; background-color: #3366CC" Width="170px">
             <br />
             <br />
-            <asp:HyperLink ID="hlTareasGen" runat="server" style="text-align: left" NavigateUrl="~/TareasAlumno.aspx">Tareas Genericas</asp:HyperLink>
-            <br />
-            <br />
-            <br />
-            <asp:HyperLink ID="hlTareasProp" runat="server" style="text-align: left">Tareas Propias</asp:HyperLink>
+            <strong>
+            <asp:HyperLink ID="hlTareasGen" runat="server" NavigateUrl="~/TareasAlumno.aspx" style="text-align: left; color: #FFFFFF;">Tareas Genericas</asp:HyperLink>
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="hlGrupos" runat="server" style="text-align: left">Grupos</asp:HyperLink>
+            <asp:HyperLink ID="hlTareasProp" runat="server" style="text-align: left; color: #FFFFFF;">Tareas Propias</asp:HyperLink>
+            <br />
+            <br />
+            <br />
+            <asp:HyperLink ID="hlGrupos" runat="server" style="text-align: left; color: #FFFFFF;">Grupos</asp:HyperLink>
+            </strong>
         </asp:Panel>
     
     </div>

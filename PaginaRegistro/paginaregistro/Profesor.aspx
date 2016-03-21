@@ -18,8 +18,8 @@
 <body style="height: 500px">
     <form id="form1" runat="server">
         <br />
-        <asp:Panel ID="Panel1" runat="server" Height="400px" style="text-align: center; background-color: #3366CC" Width="170px" BorderStyle="Inset">
-            <strong>
+        <asp:Panel ID="Panel1" runat="server" Height="400px" style="text-align: center; background-color: #3366CC; z-index: 1; left: 21px; top: 34px; position: absolute; height: 400px; width: 178px;" Width="170px" BorderStyle="Inset">
+            <strong style="position: relative">
             <br />
             <br />
             <asp:HyperLink ID="hlAsig" runat="server" style="text-align: left; color: #FFFFFF;">Asignaturas</asp:HyperLink>
@@ -46,9 +46,9 @@
             </strong>
         </asp:Panel>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Panel ID="Panel2" runat="server" BorderStyle="Inset" HorizontalAlign="Center" style="z-index: 1; left: 194px; top: 34px; position: absolute; height: 400px; width: 729px; text-align: center; margin-top: 0px; background-color: #99CCFF">
+        <asp:Panel ID="Panel2" runat="server" BorderStyle="Inset" HorizontalAlign="Center" style="z-index: 1; left: 218px; top: 34px; position: absolute; height: 400px; width: 729px; text-align: center; margin-top: 0px; background-color: #99CCFF">
             <strong><span class="auto-style1">
-            <br />
+            <br style="z-index: 1; left: 364px; top: 0px; position: absolute" />
             <br />
             <br />
             Gestion Web de Tareas-Dedicacion<br />
