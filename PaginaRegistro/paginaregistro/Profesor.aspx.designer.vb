@@ -59,31 +59,31 @@ Partial Public Class Profesor
     Protected WithEvents hlGrupos As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''Control hlAsig0.
+    '''Control hlImpXMLDoc.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents hlAsig0 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents hlImpXMLDoc As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''Control hlAsig1.
+    '''Control hlExp.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents hlAsig1 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents hlExp As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''Control hlAsig2.
+    '''Control hlImpDS.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents hlAsig2 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents hlImpDS As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
     '''Control Panel2.

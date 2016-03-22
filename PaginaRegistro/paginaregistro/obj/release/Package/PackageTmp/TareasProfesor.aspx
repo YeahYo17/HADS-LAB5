@@ -46,10 +46,16 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=tcp:hads21.database.windows.net,1433;Initial Catalog=HADS21;Persist Security Info=True;User ID=starkgs@hotmail.com@hads21;Password=HADS21perro" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Descripcion], [Codigo], [CodAsig], [Explotacion] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)">
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21ConnectionString %>" SelectCommand="SELECT [Descripcion], [Codigo], [CodAsig], [Explotacion] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)" UpdateCommand="UPDATE [TareasGenericas] SET [Descripcion]=@Descripcion, [CodAsig]=@CodAsig, [Explotacion]=@Explotacion WHERE ([Codigo]=@Codigo)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="listaAsig" Name="CodAsig" PropertyName="SelectedValue" Type="String" />
             </SelectParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="Descripcion" />
+                <asp:Parameter Name="codAsig" />
+                <asp:Parameter Name="Explotacion" />
+                <asp:Parameter Name="Codigo" />
+            </UpdateParameters>
         </asp:SqlDataSource>
         <br />
         <br />

@@ -34,15 +34,15 @@
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="hlAsig0" runat="server" NavigateUrl="~/InsertarTareaXMLDocument.aspx" style="text-align: left; color: #FFFFFF;">Importar y, XMLDocument</asp:HyperLink>
+            <asp:HyperLink ID="hlImpXMLDoc" runat="server" NavigateUrl="~/InsertarTareaXMLDocument.aspx" style="text-align: left; color: #FFFFFF;">Importar y, XMLDocument</asp:HyperLink>
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="hlAsig1" runat="server" NavigateUrl="~/Exportar.aspx" style="text-align: left; color: #FFFFFF;">Exportar</asp:HyperLink>
+            <asp:HyperLink ID="hlExp" runat="server" NavigateUrl="~/Exportar.aspx" style="text-align: left; color: #FFFFFF;">Exportar</asp:HyperLink>
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="hlAsig2" runat="server" NavigateUrl="~/InsertarTareaDataSet.aspx" style="text-align: left; color: #FFFFFF;">Importar y, DataSet</asp:HyperLink>
+            <asp:HyperLink ID="hlImpDS" runat="server" NavigateUrl="~/InsertarTareaDataSet.aspx" style="text-align: left; color: #FFFFFF;">Importar y, DataSet</asp:HyperLink>
             </strong>
         </asp:Panel>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
