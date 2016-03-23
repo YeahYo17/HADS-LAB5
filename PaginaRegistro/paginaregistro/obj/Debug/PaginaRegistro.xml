@@ -475,14 +475,6 @@ Control hlMenuProf.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PaginaRegistro.Exportar.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
 </member><member name="F:PaginaRegistro.Exportar.btnExportar">
 	<summary>
 Control btnExportar.
@@ -507,9 +499,33 @@ Control SqlDataSource3.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PaginaRegistro.Exportar.GridView1">
+</member><member name="F:PaginaRegistro.Exportar.Panel2">
 	<summary>
-Control GridView1.
+Control Panel2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Exportar.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Exportar.Panel3">
+	<summary>
+Control Panel3.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Exportar.lblExito">
+	<summary>
+Control lblExito.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -899,6 +915,22 @@ Control hlMenuProf.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PaginaRegistro.InsertarTareaXMLDocument.Panel3">
+	<summary>
+Control Panel3.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.InsertarTareaXMLDocument.lblExito">
+	<summary>
+Control lblExito.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PaginaRegistro.CambiarPassword.form1">
 	<summary>
 Control form1.
@@ -1123,14 +1155,6 @@ Control btnCrear.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PaginaRegistro.InstanciarTarea.GridView3">
-	<summary>
-Control GridView3.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
 </member><member name="F:PaginaRegistro.InstanciarTarea.SqlDataSource1">
 	<summary>
 Control SqlDataSource1.
@@ -1139,9 +1163,33 @@ Control SqlDataSource1.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PaginaRegistro.InstanciarTarea.GridView3">
+	<summary>
+Control GridView3.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PaginaRegistro.InstanciarTarea.lblModif">
 	<summary>
 Control lblModif.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.InstanciarTarea.Panel1">
+	<summary>
+Control Panel1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.InstanciarTarea.lblError">
+	<summary>
+Control lblError.
 </summary>
 	<remarks>
 Campo generado automáticamente.

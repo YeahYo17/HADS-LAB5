@@ -28,6 +28,7 @@ Public Class InsertarTareaXMLDocument
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        Dim hadError As Boolean = False
         Dim strXml As String = "App_Data/" & DropDownList1.SelectedValue & ".xml"
 
         Dim xmlDoc As New XmlDocument
@@ -36,6 +37,7 @@ Public Class InsertarTareaXMLDocument
         Catch ex As IO.FileNotFoundException
             lblError.Text = "ERROR: " & ex.Message
             Panel2.Visible = True
+            hadError = True
         End Try
 
         Dim Conexion As SqlConnection
@@ -72,9 +74,15 @@ Public Class InsertarTareaXMLDocument
         Catch ex As Exception
             lblError.Text = "ERROR: " & ex.Message
             Panel2.Visible = True
+            hadError = True
         End Try
 
         dSet.AcceptChanges()
+
+        If hadError = False Then
+            lblExito.Text = "Se ha importado el archivo '" & DropDownList1.SelectedValue & ".xml' CORRECTAMENTE."
+            Panel3.Visible = True
+        End If
 
     End Sub
 End Class

@@ -46,6 +46,12 @@
         <asp:HyperLink ID="hlMenuProf" runat="server" NavigateUrl="~/Profesor.aspx" style="z-index: 1; left: 37px; top: 259px; position: absolute">Menu Profesor</asp:HyperLink>
     
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        <asp:Panel ID="Panel3" runat="server" style="z-index: 1; left: 920px; top: 88px; position: absolute; height: 325px; width: 360px" BorderColor="#009900" BorderWidth="2px" Visible="False">
+            &nbsp;&nbsp;
+            <asp:Label ID="lblExito" runat="server" style="z-index: 1; position: relative; color: #009900; font-weight: 700; font-size: large"></asp:Label>
+        </asp:Panel>
+    
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -77,15 +77,6 @@ Partial Public Class InstanciarTarea
     Protected WithEvents btnCrear As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control GridView3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GridView3 As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
     '''Control SqlDataSource1.
     '''</summary>
     '''<remarks>
@@ -95,6 +86,15 @@ Partial Public Class InstanciarTarea
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
+    '''Control GridView3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView3 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
     '''Control lblModif.
     '''</summary>
     '''<remarks>
@@ -102,6 +102,24 @@ Partial Public Class InstanciarTarea
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblModif As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control Panel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Control lblError.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control hlPagAnt.

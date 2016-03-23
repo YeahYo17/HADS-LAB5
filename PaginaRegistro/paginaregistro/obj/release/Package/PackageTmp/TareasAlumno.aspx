@@ -47,7 +47,7 @@
                 <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
                 <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
                 <asp:BoundField DataField="Horas" HeaderText="Horas" SortExpression="Horas" />
-                <asp:BoundField DataField="TipoTarea" HeaderText="TipoTarea" SortExpression="TipoTarea" />
+                <asp:BoundField DataField="Tipo Tarea" HeaderText="Tipo Tarea" SortExpression="Tipo Tarea" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -60,7 +60,7 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=tcp:hads21.database.windows.net,1433;Initial Catalog=HADS21;Persist Security Info=True;User ID=starkgs@hotmail.com@hads21;Password=HADS21perro" ProviderName="System.Data.SqlClient" SelectCommand="SELECT TareasGenericas.Codigo AS &quot;Codigo&quot;,TareasGenericas.Descripcion AS &quot;Descripcion&quot;,HEstimadas AS Horas,TipoTarea FROM [EstudiantesGrupo] INNER JOIN [GruposClase] ON Grupo=GruposClase.codigo INNER JOIN [TareasGenericas] ON codigoasig=CodAsig  WHERE Email=@email AND CodAsig=@Asig AND Explotacion=1">
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21ConnectionString %>" SelectCommand="SELECT TareasGenericas.Codigo AS &quot;Codigo&quot;,TareasGenericas.Descripcion AS &quot;Descripcion&quot;, TareasGenericas.HEstimadas AS &quot;Horas&quot;, TareasGenericas.TipoTarea AS &quot;Tipo Tarea&quot; FROM [EstudiantesGrupo] INNER JOIN [GruposClase] ON Grupo=GruposClase.codigo INNER JOIN [TareasGenericas] ON codigoasig=CodAsig   WHERE EstudiantesGrupo.Email=@email AND CodAsig=@Asig AND Explotacion=1 EXCEPT SELECT TareasGenericas.Codigo,TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea FROM [EstudiantesTareas] INNER JOIN [TareasGenericas]  ON EstudiantesTareas.CodTarea=TareasGenericas.Codigo">
             <SelectParameters>
                 <asp:SessionParameter Name="email" SessionField="email" />
                 <asp:ControlParameter ControlID="DropDownList1" Name="Asig" PropertyName="SelectedValue" />

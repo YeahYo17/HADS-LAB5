@@ -72,8 +72,10 @@
             <asp:Label ID="lblError" runat="server" style="z-index: 1; position: relative; color: #FF0000; font-weight: 700; font-size: large"></asp:Label>
         </asp:Panel>
     
-        <asp:GridView ID="GridView1" runat="server" style="z-index: 1; left: 41px; top: 358px; position: absolute; height: 133px; width: 187px">
-        </asp:GridView>
+        <asp:Panel ID="Panel3" runat="server" style="z-index: 1; left: 31px; top: 321px; position: absolute; height: 325px; width: 360px" BorderColor="#009900" BorderWidth="2px" Visible="False">
+            &nbsp;&nbsp;
+            <asp:Label ID="lblExito" runat="server" style="z-index: 1; position: relative; color: #009900; font-weight: 700; font-size: large"></asp:Label>
+        </asp:Panel>
     
     </div>
     </form>

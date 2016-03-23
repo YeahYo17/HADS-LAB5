@@ -122,11 +122,20 @@ Partial Public Class Exportar
     Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control GridView1.
+    '''Control Panel3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents Panel3 As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Control lblExito.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblExito As Global.System.Web.UI.WebControls.Label
 End Class

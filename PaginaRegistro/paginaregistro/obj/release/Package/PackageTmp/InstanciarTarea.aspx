@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="font-weight: 700">
+    <div style="font-weight: 700; z-index: 1; left: 10px; top: 15px; position: absolute; height: 649px; width: 1052px;">
     
         <uc1:CabeceraAlumno ID="CabeceraAlumno1" runat="server" />
         <br />
@@ -36,8 +36,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnCrear" runat="server" Height="40px" Text="Crear Tarea" Width="153px" />
         <br />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21ConnectionString %>" SelectCommand="SELECT * FROM [EstudiantesTareas] WHERE ([Email] = @Email)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtUser" Name="Email" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
         <br />
-        <asp:GridView ID="GridView3" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="text-align: center" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Email,CodTarea" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView3" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="text-align: center; z-index: 1; left: 511px; top: 103px; position: absolute; height: 162px; width: 277px;" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Email,CodTarea" DataSourceID="SqlDataSource1">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="True" SortExpression="Email" />
@@ -56,19 +61,18 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=tcp:hads21.database.windows.net,1433;Initial Catalog=HADS21;Persist Security Info=True;User ID=starkgs@hotmail.com@hads21;Password=HADS21perro" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [EstudiantesTareas] WHERE ([Email] = @Email)">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="txtUser" Name="Email" PropertyName="Text" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-        <br />
-        <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblModif" runat="server" style="color: #009933; font-size: x-large" Text="Modificacion Realizada Correctamente" Visible="False"></asp:Label>
         <br />
         <br />
+        <br />
+        <asp:Panel ID="Panel1" runat="server" BorderColor="Red" BorderWidth="2px" style="z-index: 1; left: 30px; top: 403px; position: absolute; height: 200px; width: 400px" Visible="False">
+            &nbsp;
+            <asp:Label ID="lblError" runat="server" style="z-index: 1; position: relative; color: #FF0000; font-size: large;"></asp:Label>
+        </asp:Panel>
+        <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="hlPagAnt" runat="server" NavigateUrl="~/TareasAlumno.aspx">Pagina Anterior</asp:HyperLink>
+        <asp:HyperLink ID="hlPagAnt" runat="server" NavigateUrl="~/TareasAlumno.aspx" style="z-index: 1; left: 208px; top: 292px; position: absolute">Pagina Anterior</asp:HyperLink>
     
     </div>
     </form>
