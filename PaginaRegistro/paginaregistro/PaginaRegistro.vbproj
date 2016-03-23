@@ -82,9 +82,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alumno.aspx" />
-    <Content Include="App_Data\HAS.xml" />
+    <Content Include="App_Data\HAS.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\SEG.xml" />
-    <Content Include="App_Data\XSLTFile.xsl" />
+    <Content Include="App_Data\XSLTFile.xsl">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="CabececeraProfesor.ascx" />
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />

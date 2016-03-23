@@ -13,8 +13,11 @@ Public Class InsertarTarea
         Dim gridView As New GridView
         Dim dTable As New DataTable
         Dim dSet As New DataSet
+        Dim Conexion As SqlConnection
+        Conexion = Session("Conexion")
         Dim dAdapter As New SqlDataAdapter
         dAdapter = Session("dAdapter")
+        dAdapter.SelectCommand = New SqlCommand("SELECT * FROM TareasGenericas", Conexion)
         Dim cmdBuild As New SqlCommandBuilder(dAdapter)
 
         dAdapter.Fill(dSet, "TareasGenericasProf")

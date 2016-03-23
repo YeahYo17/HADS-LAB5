@@ -32,7 +32,7 @@ Partial Public Class InsertarTarea
     Protected WithEvents CabececeraProfesor1 As Global.PaginaRegistro.CabececeraProfesor
 
     '''<summary>
-    '''Control TextBox1.
+    '''Control txtCod.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -41,7 +41,7 @@ Partial Public Class InsertarTarea
     Protected WithEvents txtCod As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control TextBox2.
+    '''Control txtDescrip.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -50,7 +50,7 @@ Partial Public Class InsertarTarea
     Protected WithEvents txtDescrip As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DropDownList1.
+    '''Control listaAsig.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -68,7 +68,7 @@ Partial Public Class InsertarTarea
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Control TextBox3.
+    '''Control txtHoras.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -77,7 +77,7 @@ Partial Public Class InsertarTarea
     Protected WithEvents txtHoras As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DropDownList2.
+    '''Control listaTareas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.

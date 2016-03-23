@@ -11,9 +11,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 475px">
+    <div style="height: 550px; width: 1315px;">
     
         <uc1:CabececeraProfesor ID="CabececeraProfesor1" runat="server" />
+    
+        <asp:Panel ID="Panel2" runat="server" style="z-index: 1; left: 925px; top: 94px; position: absolute; height: 325px; width: 360px" BorderColor="Red" BorderWidth="2px" Visible="False">
+            &nbsp;&nbsp;
+            <asp:Label ID="lblError" runat="server" style="z-index: 1; position: relative; color: #FF0000; font-weight: 700; font-size: large"></asp:Label>
+        </asp:Panel>
+    
         <br />
     
         <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 37px; top: 124px; position: absolute; height: 25px; width: 270px" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig" AutoPostBack="True">
@@ -29,7 +35,7 @@
     
         <br />
         <br />
-        <asp:Panel ID="Panel1" runat="server" style="z-index: 1; left: 488px; top: 80px; position: absolute; height: 150px; width: 497px">
+        <asp:Panel ID="Panel1" runat="server" style="z-index: 1; left: 400px; top: 80px; position: absolute; height: 150px; width: 497px">
             <asp:Xml ID="Xml1" runat="server"></asp:Xml>
         </asp:Panel>
         <br />
@@ -41,7 +47,6 @@
     
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 37px; top: 400px; position: absolute; color: #FF0000; font-weight: 700; font-size: large"></asp:Label>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     

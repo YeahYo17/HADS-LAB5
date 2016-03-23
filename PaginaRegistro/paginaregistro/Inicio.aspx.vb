@@ -9,7 +9,7 @@ Public Class Inicio
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Session("Conexion") = Conexion
-        Session("dAdapter") = New SqlDataAdapter("SELECT * FROM TareasGenericas", Conexion)
+        Session("dAdapter") = New SqlDataAdapter
         Session("email") = Nothing
     End Sub
 

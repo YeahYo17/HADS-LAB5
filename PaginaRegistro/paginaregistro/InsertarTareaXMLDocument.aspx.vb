@@ -5,12 +5,20 @@ Public Class InsertarTareaXMLDocument
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        Dim strXml As String = Nothing
+        Dim strXml As String = "App_Data/" & DropDownList1.SelectedValue & ".xml"
+        Panel2.Visible = False
 
-        If IsPostBack Then
-            strXml = "App_Data/" & DropDownList1.SelectedValue & ".xml"
+        If IsPostBack = False Then
+            If My.Computer.FileSystem.FileExists(Server.MapPath(strXml)) = False Then
+                Panel2.Visible = False
+                Exit Sub
+            End If
         Else
-            strXml = "App_Data/HAS.xml"
+            If My.Computer.FileSystem.FileExists(Server.MapPath(strXml)) = False Then
+                lblError.Text = "ERROR - File Not Found: " & DropDownList1.SelectedValue.ToString & ".xml"
+                Panel2.Visible = True
+                Exit Sub
+            End If
         End If
 
         Xml1.DocumentSource = Server.MapPath(strXml)
@@ -23,7 +31,12 @@ Public Class InsertarTareaXMLDocument
         Dim strXml As String = "App_Data/" & DropDownList1.SelectedValue & ".xml"
 
         Dim xmlDoc As New XmlDocument
-        xmlDoc.Load(Server.MapPath(strXml))
+        Try
+            xmlDoc.Load(Server.MapPath(strXml))
+        Catch ex As IO.FileNotFoundException
+            lblError.Text = "ERROR: " & ex.Message
+            Panel2.Visible = True
+        End Try
 
         Dim Conexion As SqlConnection
         Conexion = Session("Conexion")
@@ -58,6 +71,7 @@ Public Class InsertarTareaXMLDocument
             dAdapter.Update(dTable)
         Catch ex As Exception
             lblError.Text = "ERROR: " & ex.Message
+            Panel2.Visible = True
         End Try
 
         dSet.AcceptChanges()
