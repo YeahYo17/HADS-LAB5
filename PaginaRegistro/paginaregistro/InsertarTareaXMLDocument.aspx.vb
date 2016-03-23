@@ -1,22 +1,37 @@
 ﻿Imports System.Xml, System.Data.SqlClient
+Imports System.Xml.Xsl
 
 Public Class InsertarTareaXMLDocument
     Inherits System.Web.UI.Page
+
+    Private hadError As Boolean = False
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Dim strXml As String = "App_Data/" & DropDownList1.SelectedValue & ".xml"
         Panel2.Visible = False
+        Panel3.Visible = False
+        hadError = False
 
         If IsPostBack = False Then
+
+            DropDownList1.DataBind()
+            DropDownList1.Items.Add("- Seleccionar Asignatura -")
+            DropDownList1.SelectedIndex = -1
+            DropDownList1.Items.FindByText("- Seleccionar Asignatura -").Selected = True
+
             If My.Computer.FileSystem.FileExists(Server.MapPath(strXml)) = False Then
-                Panel2.Visible = False
                 Exit Sub
             End If
+
         Else
+            If DropDownList1.Items.FindByText("- Seleccionar Asignatura -").Selected = True Then
+                Exit Sub
+            End If
             If My.Computer.FileSystem.FileExists(Server.MapPath(strXml)) = False Then
                 lblError.Text = "ERROR - File Not Found: " & DropDownList1.SelectedValue.ToString & ".xml"
                 Panel2.Visible = True
+                hadError = True
                 Exit Sub
             End If
         End If
@@ -28,7 +43,9 @@ Public Class InsertarTareaXMLDocument
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim hadError As Boolean = False
+        Panel2.Visible = False
+        Panel3.Visible = False
+
         Dim strXml As String = "App_Data/" & DropDownList1.SelectedValue & ".xml"
 
         Dim xmlDoc As New XmlDocument
@@ -83,6 +100,30 @@ Public Class InsertarTareaXMLDocument
             lblExito.Text = "Se ha importado el archivo '" & DropDownList1.SelectedValue & ".xml' CORRECTAMENTE."
             Panel3.Visible = True
         End If
+
+    End Sub
+
+    Protected Sub RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList1.SelectedIndexChanged
+
+        Dim strXml As String = "App_Data/" & DropDownList1.SelectedValue & ".xml"
+
+        'Dim xmlDoc As New System.Xml.XPath.XPathDocument(Server.MapPath(strXml))
+
+        ' Create the XslCompiledTransform and load the style sheet.
+        Dim xslt As XslCompiledTransform = New XslCompiledTransform()
+        xslt.Load(Server.MapPath("App_Data/XSLTFile.xsl"))
+
+        ' Create the XsltArgumentList.
+        Dim xsltArgList As XsltArgumentList = New XsltArgumentList()
+        xsltArgList.AddParam("ordenar", "", RadioButtonList1.SelectedValue.ToString)
+
+        'Execute the transformation and generate the output to the Response object's output stream.
+        'xslt.Transform(xmlDoc, xsltArgList, Response.OutputStream)
+
+        Xml1.TransformArgumentList = xsltArgList
+
+        'Xml1.DocumentSource = Server.MapPath(strXml)
+        'Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
 
     End Sub
 End Class

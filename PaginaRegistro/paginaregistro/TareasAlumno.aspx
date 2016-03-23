@@ -8,39 +8,40 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        #form1 {
+            width: 1315px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="font-weight: 700">
+    <uc1:CabeceraAlumno ID="CabeceraAlumno1" runat="server" />
+    <div style="font-weight: 700; width: 1305px; height: 400px;">
     
-        <uc1:CabeceraAlumno ID="CabeceraAlumno1" runat="server" />
         <br />
         Seleccionar Asignatura (solo se muestran aquellas en las que está matriculado):<br />
         <br />
-        <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="120px" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig" AutoPostBack="True">
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" Width="225px" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig" AutoPostBack="True">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=tcp:hads21.database.windows.net,1433;Initial Catalog=HADS21;Persist Security Info=True;User ID=starkgs@hotmail.com@hads21;Password=HADS21perro" ProviderName="System.Data.SqlClient" SelectCommand="SELECT codigoasig FROM [GruposClase] INNER JOIN [EstudiantesGrupo]  ON codigo=Grupo WHERE email=@email">
             <SelectParameters>
                 <asp:SessionParameter Name="email" SessionField="email" />
             </SelectParameters>
         </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21ConnectionString %>" SelectCommand="SELECT TareasGenericas.Codigo AS &quot;Codigo&quot;,TareasGenericas.Descripcion AS &quot;Descripcion&quot;, TareasGenericas.HEstimadas AS &quot;Horas&quot;, TareasGenericas.TipoTarea AS &quot;Tipo Tarea&quot; FROM [EstudiantesGrupo] INNER JOIN [GruposClase] ON Grupo=GruposClase.codigo INNER JOIN [TareasGenericas] ON codigoasig=CodAsig   WHERE EstudiantesGrupo.Email=@email AND CodAsig=@Asig AND Explotacion=1 EXCEPT SELECT TareasGenericas.Codigo,TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea FROM [EstudiantesTareas] INNER JOIN [TareasGenericas]  ON EstudiantesTareas.CodTarea=TareasGenericas.Codigo">
+            <SelectParameters>
+                <asp:SessionParameter Name="email" SessionField="email" />
+                <asp:ControlParameter ControlID="DropDownList1" Name="Asig" PropertyName="SelectedValue" />
+            </SelectParameters>
+        </asp:SqlDataSource>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Panel ID="Panel2" runat="server" style="margin-left: 295px" Width="135px">
-            <asp:CheckBox ID="cbCodigo" runat="server" Text="Codigo" />
-            <br />
-            <asp:CheckBox ID="cbDescrip" runat="server" Text="Descripcion" />
-            <br />
-            <asp:CheckBox ID="cbHoras" runat="server" Text="Horas" />
-            <br />
-            <asp:CheckBox ID="cbTipo" runat="server" Text="Tipo Tarea" />
-        </asp:Panel>
         <br />
 &nbsp;&nbsp;
         <br />
-        <asp:Button ID="btnTareasAlum" runat="server" Height="35px" Text="Ver Tareas" Width="150px" />
         <br />
         <br />
-        <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="text-align: center" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2">
+        <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="text-align: left; z-index: 1; left: 650px; top: 99px; position: absolute; height: 197px; width: 600px;" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField ButtonType="Button" SelectText="Instanciar" ShowSelectButton="True" />
@@ -60,13 +61,14 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21ConnectionString %>" SelectCommand="SELECT TareasGenericas.Codigo AS &quot;Codigo&quot;,TareasGenericas.Descripcion AS &quot;Descripcion&quot;, TareasGenericas.HEstimadas AS &quot;Horas&quot;, TareasGenericas.TipoTarea AS &quot;Tipo Tarea&quot; FROM [EstudiantesGrupo] INNER JOIN [GruposClase] ON Grupo=GruposClase.codigo INNER JOIN [TareasGenericas] ON codigoasig=CodAsig   WHERE EstudiantesGrupo.Email=@email AND CodAsig=@Asig AND Explotacion=1 EXCEPT SELECT TareasGenericas.Codigo,TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea FROM [EstudiantesTareas] INNER JOIN [TareasGenericas]  ON EstudiantesTareas.CodTarea=TareasGenericas.Codigo">
-            <SelectParameters>
-                <asp:SessionParameter Name="email" SessionField="email" />
-                <asp:ControlParameter ControlID="DropDownList1" Name="Asig" PropertyName="SelectedValue" />
-            </SelectParameters>
-        </asp:SqlDataSource>
         <br />
+    
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" AutoPostBack="True" BorderColor="Silver" BorderWidth="1px" style="z-index: 1; left: 281px; top: 138px; position: absolute; height: 90px; width: 120px">
+            <asp:ListItem Enabled="False" Selected="True">Codigo</asp:ListItem>
+            <asp:ListItem>Descripcion</asp:ListItem>
+            <asp:ListItem>Horas</asp:ListItem>
+            <asp:ListItem>Tipo Tarea</asp:ListItem>
+        </asp:CheckBoxList>
     
     </div>
     </form>

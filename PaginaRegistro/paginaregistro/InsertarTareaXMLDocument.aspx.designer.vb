@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class InsertarTareaXMLDocument
 
     '''<summary>
+    '''Control CabececeraProfesor2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CabececeraProfesor2 As Global.PaginaRegistro.CabececeraProfesor
+
+    '''<summary>
     '''Control form1.
     '''</summary>
     '''<remarks>
@@ -21,15 +30,6 @@ Partial Public Class InsertarTareaXMLDocument
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
-    '''Control CabececeraProfesor1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CabececeraProfesor1 As Global.PaginaRegistro.CabececeraProfesor
 
     '''<summary>
     '''Control Panel2.
@@ -102,6 +102,15 @@ Partial Public Class InsertarTareaXMLDocument
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Xml1 As Global.System.Web.UI.WebControls.Xml
+
+    '''<summary>
+    '''Control RadioButtonList1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
     '''Control hlMenuProf.

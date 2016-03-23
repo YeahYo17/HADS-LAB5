@@ -5,11 +5,28 @@ Public Class Exportar
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        Label2.Visible = False
+        Panel2.Visible = False
+        Panel3.Visible = False
+
+        If IsPostBack = False Then
+            DropDownList1.DataBind()
+            DropDownList1.Items.Add("- Seleccionar Asignatura -")
+            DropDownList1.SelectedIndex = -1
+            DropDownList1.Items.FindByText("- Seleccionar Asignatura -").Selected = True
+        Else
+            If DropDownList1.Items.FindByText("- Seleccionar Asignatura -").Selected = False Then
+                Label2.Visible = True
+            End If
+        End If
+
     End Sub
 
     Protected Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
 
         Dim hadError As Boolean = False
+        Panel2.Visible = False
+        Panel3.Visible = False
 
         Dim Conexion As SqlConnection
         Conexion = Session("Conexion")
@@ -32,8 +49,9 @@ Public Class Exportar
 
         Using writer As XmlWriter = XmlWriter.Create(Server.MapPath(strXml), settings)
 
-            writer.WriteStartDocument()
+            writer.WriteStartDocument(True)     'standalone="yes"
             writer.WriteStartElement("tareas")
+            writer.WriteAttributeString("xmlns", "has", Nothing, "http://ji.ehu.es/has")
 
             Dim tarea As DataRow
             For Each tarea In dTable.Rows

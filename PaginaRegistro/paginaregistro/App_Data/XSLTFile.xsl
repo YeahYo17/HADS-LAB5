@@ -2,7 +2,8 @@
 
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:param name="ordenar"/>
+  
   <xsl:template match="tareas">
     <html>
       <H3> Lista de tareas de la asignatura selecionada</H3>
@@ -14,6 +15,7 @@
             <td>HORAS EST.</td>
           </tr>
           <xsl:for-each select="./tarea">
+            <xsl:sort select="./*[local-name() = $ordenar]"/>            
             <tr>
               <td>
                 <xsl:value-of select="./codigo"/>

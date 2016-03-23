@@ -175,7 +175,7 @@
     </Compile>
     <Compile Include="InsertarTareaXMLDocument.aspx.vb">
       <DependentUpon>InsertarTareaXMLDocument.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InstanciarTarea.aspx.designer.vb">
       <DependentUpon>InstanciarTarea.aspx</DependentUpon>

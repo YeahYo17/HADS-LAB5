@@ -11,12 +11,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 500px">
+    <div style="height: 565px">
     
         <uc1:CabececeraProfesor ID="CabececeraProfesor1" runat="server" />
         <br />
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 37px; top: 94px; position: absolute; font-weight: 700; right: 801px;" Text="Seleccionar Asignatura a Exportar: "></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 37px; top: 124px; position: absolute; right: 765px; height: 25px; width: 270px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig">
+        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 37px; top: 94px; position: absolute; font-weight: 700; right: 717px;" Text="Seleccionar Asignatura a Exportar: "></asp:Label>
+        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 37px; top: 124px; position: absolute; right: 696px; height: 25px; width: 320px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig">
         </asp:DropDownList>
         <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 495px; top: 94px; position: absolute; font-weight: 700;" Text="Lista de Tareas de la Asignatura Seleccionada: "></asp:Label>
         <asp:GridView ID="gvTareas" runat="server" style="z-index: 1; left: 495px; top: 124px; position: absolute; height: 133px; width: 520px" CellPadding="4" ForeColor="#333333" GridLines="None" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource3">
@@ -41,7 +41,7 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
     
-        <asp:HyperLink ID="hlMenuProf" runat="server" NavigateUrl="~/Profesor.aspx" style="z-index: 1; left: 37px; top: 259px; position: absolute">Menu Profesor</asp:HyperLink>
+        <asp:HyperLink ID="hlMenuProf" runat="server" NavigateUrl="~/Profesor.aspx" style="z-index: 1; left: 263px; top: 189px; position: absolute">Menu Profesor</asp:HyperLink>
     
         <asp:Button ID="btnExportar" runat="server" style="z-index: 1; left: 37px; top: 185px; position: absolute; width: 200px; height: 35px;" Text="EXPORTAR" />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21ConnectionString %>" SelectCommand="SELECT codigoasig FROM [GruposClase] INNER JOIN [ProfesoresGrupo]  ON codigo=codigogrupo WHERE email=@email">
@@ -49,9 +49,6 @@
                 <asp:SessionParameter Name="email" SessionField="email" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <br />
-        <br />
-        <br />
         <br />
         <br />
         <br />
@@ -67,12 +64,16 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
-        <asp:Panel ID="Panel2" runat="server" style="z-index: 1; left: 37px; top: 325px; position: absolute; height: 325px; width: 360px" BorderColor="Red" BorderWidth="2px" Visible="False">
+        <br />
+        <br />
+        <br />
+    
+        <asp:Panel ID="Panel2" runat="server" style="z-index: 1; left: 38px; top: 243px; position: absolute; height: 325px; width: 360px" BorderColor="Red" BorderWidth="2px" Visible="False">
             &nbsp;&nbsp;
             <asp:Label ID="lblError" runat="server" style="z-index: 1; position: relative; color: #FF0000; font-weight: 700; font-size: large"></asp:Label>
         </asp:Panel>
     
-        <asp:Panel ID="Panel3" runat="server" style="z-index: 1; left: 31px; top: 321px; position: absolute; height: 325px; width: 360px" BorderColor="#009900" BorderWidth="2px" Visible="False">
+        <asp:Panel ID="Panel3" runat="server" style="z-index: 1; left: 31px; top: 236px; position: absolute; height: 325px; width: 360px" BorderColor="#009900" BorderWidth="2px" Visible="False">
             &nbsp;&nbsp;
             <asp:Label ID="lblExito" runat="server" style="z-index: 1; position: relative; color: #009900; font-weight: 700; font-size: large"></asp:Label>
         </asp:Panel>
