@@ -86,6 +86,14 @@ Control GridView2.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PaginaRegistro.TareasAlumno.hlMenu">
+	<summary>
+Control hlMenu.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PaginaRegistro.TareasAlumno.CheckBoxList1">
 	<summary>
 Control CheckBoxList1.
@@ -275,9 +283,9 @@ Control form1.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PaginaRegistro.Alumno.Panel1">
+</member><member name="F:PaginaRegistro.Alumno.Panel3">
 	<summary>
-Control Panel1.
+Control Panel3.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -302,6 +310,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:PaginaRegistro.Alumno.hlGrupos">
 	<summary>
 Control hlGrupos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Alumno.Panel2">
+	<summary>
+Control Panel2.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -709,83 +725,123 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.form1">
 	<summary>
-form1 control.
+Control form1.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PaginaRegistro.Inicio.txtEmailInc">
+</member><member name="F:PaginaRegistro.Inicio.CabeceraInicio1">
 	<summary>
-txtEmailInc control.
+Control CabeceraInicio1.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Inicio.Panel1">
+	<summary>
+Control Panel1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.RequiredFieldValidator1">
 	<summary>
-RequiredFieldValidator1 control.
+Control RequiredFieldValidator1.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PaginaRegistro.Inicio.RegularExpressionValidator1">
+</member><member name="F:PaginaRegistro.Inicio.Panel2">
 	<summary>
-RegularExpressionValidator1 control.
+Control Panel2.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Inicio.txtEmailInc">
+	<summary>
+Control txtEmailInc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.txtPassInc">
 	<summary>
-txtPassInc control.
+Control txtPassInc.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:PaginaRegistro.Inicio.RequiredFieldValidator2">
-	<summary>
-RequiredFieldValidator2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.btnLogin">
 	<summary>
-btnLogin control.
+Control btnLogin.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.hyperLinkRegistro">
 	<summary>
-hyperLinkRegistro control.
+Control hyperLinkRegistro.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.HyperLink1">
 	<summary>
-HyperLink1 control.
+Control HyperLink1.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Inicio.Panel4">
+	<summary>
+Control Panel4.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Inicio.RequiredFieldValidator2">
+	<summary>
+Control RequiredFieldValidator2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Inicio.Panel3">
+	<summary>
+Control Panel3.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PaginaRegistro.Inicio.RegularExpressionValidator1">
+	<summary>
+Control RegularExpressionValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.Inicio.lblError">
 	<summary>
-lblError control.
+Control lblError.
 </summary>
 	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member><member name="F:PaginaRegistro.InsertarTareaXMLDocument.CabececeraProfesor2">
 	<summary>

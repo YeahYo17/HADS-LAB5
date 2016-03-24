@@ -23,13 +23,13 @@ Partial Public Class Alumno
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control Panel1.
+    '''Control Panel3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents Panel3 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''Control hlTareasGen.
@@ -57,4 +57,13 @@ Partial Public Class Alumno
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents hlGrupos As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Control Panel2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Panel2 As Global.System.Web.UI.WebControls.Panel
 End Class

@@ -93,6 +93,7 @@
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />
     <Content Include="CabeceraAlumno.ascx" />
+    <Content Include="CabeceraInicio.ascx" />
     <Content Include="Exportar.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="InsertarTarea.aspx" />
@@ -140,6 +141,13 @@
     </Compile>
     <Compile Include="CabeceraAlumno.ascx.vb">
       <DependentUpon>CabeceraAlumno.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Copia de CabececeraProfesor.ascx.designer.vb">
+      <DependentUpon>CabeceraInicio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Copia de CabececeraProfesor.ascx.vb">
+      <DependentUpon>CabeceraInicio.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Exportar.aspx.designer.vb">

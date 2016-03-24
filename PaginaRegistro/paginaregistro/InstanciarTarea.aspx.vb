@@ -5,9 +5,24 @@ Public Class InstanciarTarea
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        Panel1.Visible = False
+        lblModif.Visible = False
+
         Dim codUrl As String = Request.QueryString("codigo")
         txtUser.Text = Session("email").ToString
         txtTarea.Text = codUrl
+
+        Dim libVB As New RegistroLibrary.LibraryVB
+        libVB.Conectar()
+
+        Dim hEstim As Integer
+        If libVB.HEstimadasInstanciar(codUrl, hEstim, lblError.Text) Then
+            txtHEst.Text = hEstim
+        Else
+            txtHEst.Text = ""
+        End If
+        libVB.Desconectar()
+
 
     End Sub
 

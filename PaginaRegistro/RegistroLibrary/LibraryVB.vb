@@ -382,4 +382,19 @@ Public Class LibraryVB
 
     End Function
 
+    Public Function HEstimadasInstanciar(ByVal codigo As String, ByRef hestimadas As Integer, ByRef errorLbl As String) As Boolean
+
+        Dim cmd As New SqlCommand("SELECT HEstimadas FROM TareasGenericas WHERE Codigo='" & codigo & "'", Conexion)
+
+        Try
+            hestimadas = CInt(cmd.ExecuteScalar)
+        Catch ex As Exception
+            errorLbl = "ERROR: " & ex.Message
+            Return False
+        End Try
+
+        Return True
+
+    End Function
+
 End Class
