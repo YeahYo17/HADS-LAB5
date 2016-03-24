@@ -3,6 +3,8 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        lblError.Visible = False
+
         Dim libVb As New RegistroLibrary.LibraryVB
 
         Dim mbrUrl As String
@@ -20,7 +22,8 @@
         Else
             Dim seg As Integer = 3
 
-            MsgBox("Ha habido un error en la confirmacion. Se le redireccionara a la pagina de Inicio en 3 segundos.", MsgBoxStyle.MsgBoxSetForeground)
+            lblError.Visible = True
+            lblError.Text = "Ha habido un error en la confirmacion. Se le redireccionara a la pagina de Inicio en " & seg & " segundos.\n - " & lblError.Text
 
             System.Threading.Thread.Sleep(seg * 1000) '3 seg
             Response.Redirect("Inicio.aspx")

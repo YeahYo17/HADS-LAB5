@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Principal.aspx.vb" Inherits="PaginaRegistro.Principal" %>
 
+<%@ Register src="CabeceraInicio.ascx" tagname="CabeceraInicio" tagprefix="uc1" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,7 +21,9 @@
     <form id="form1" runat="server">
     <div style="text-align: center; font-size: xx-large">
     
-        <strong style="text-decoration: underline; color: #FF0000">
+        <strong style="color: #FF0000">
+        <uc1:CabeceraInicio ID="CabeceraInicio1" runat="server" />
+        <br />
         <br class="auto-style1" />
         </strong><span class="auto-style2"><strong style="text-decoration: underline">¡HAS ENTRADO A LA PAGINA PRINCIPAL!</strong></span><strong style="text-decoration: underline; color: #FF0000"><br class="auto-style1" />
         <br class="auto-style1" />

@@ -220,7 +220,11 @@ Public Class LibraryVB
 
         Dim confSql As Boolean = False
 
-        StrSql = "SELECT Email,Pregunta,Confirmado FROM USERS WHERE Email='" & email & "'"
+        ' --- HADS21-USUARIOS (USERS) ---
+        'StrSql = "SELECT Email,Pregunta,Confirmado FROM USERS WHERE Email='" & email & "'"
+        ' --- AZURE (Usuarios) ---
+        StrSql = "SELECT email,pregunta,confirmado FROM Usuarios WHERE email='" & email & "'"
+
         comando = New SqlClient.SqlCommand(StrSql, Conexion)
 
         Try
@@ -232,8 +236,12 @@ Public Class LibraryVB
         dReader.Read()
 
         If dReader.HasRows Then
-            preg = dReader.Item("Pregunta")
-            confSql = dReader.Item("Confirmado")
+            ' --- HADS21-USUARIOS (USERS) ---
+            'preg = dReader.Item("Pregunta")
+            'confSql = dReader.Item("Confirmado")
+            ' --- AZURE (Usuarios) ---
+            preg = dReader.Item("pregunta")
+            confSql = dReader.Item("confirmado")
         Else
             errorLbl = "El Email introducido no es valido."
             Return False
@@ -261,7 +269,11 @@ Public Class LibraryVB
 
         Dim resSql As String
 
-        StrSql = "SELECT Respuesta FROM USERS WHERE Email='" & email & "'"
+        ' --- HADS21-USUARIOS (USERS) ---
+        'StrSql = "SELECT Respuesta FROM USERS WHERE Email='" & email & "'"
+        ' --- AZURE (Usuarios) ---
+        StrSql = "SELECT respuesta FROM Usuarios WHERE email='" & email & "'"
+
         comando = New SqlClient.SqlCommand(StrSql, Conexion)
 
         Try
@@ -293,7 +305,11 @@ Public Class LibraryVB
 
         Dim filasAfectadas As Integer
 
-        StrSql = "UPDATE USERS SET Password='" & pass & "' WHERE Email='" & email & "'"
+        ' --- HADS21-USUARIOS (USERS) ---
+        'StrSql = "UPDATE USERS SET Password='" & pass & "' WHERE Email='" & email & "'"
+        ' --- AZURE (Usuarios) ---
+        StrSql = "UPDATE Usuarios SET pass='" & pass & "' WHERE email='" & email & "'"
+
         comando = New SqlClient.SqlCommand(StrSql, Conexion)
 
         Try
@@ -326,6 +342,9 @@ Public Class LibraryVB
         Dim emailSql As String = "Vacio"
         Dim passSql As String = "Vacio"
 
+        ' --- HADS21-USUARIOS (USERS) ---
+        'StrSql = "SELECT Email,Password,Confirmado FROM USERS WHERE Email='" & email & "' AND Password='" & pass & "'"
+        ' --- AZURE (Usuarios) ---
         StrSql = "SELECT email,pass,confirmado FROM Usuarios WHERE email='" & email & "' AND pass='" & pass & "'"
         comando = New SqlClient.SqlCommand(StrSql, Conexion)
 
@@ -338,11 +357,18 @@ Public Class LibraryVB
         dReader.Read()
 
         If dReader.HasRows Then
+            ' --- HADS21-USUARIOS (USERS) ---
+            'emailSql = dReader.Item("Email")
+            'passSql = dReader.Item("Password")
+            ' --- AZURE (Usuarios) ---
             emailSql = dReader.Item("email")
             passSql = dReader.Item("pass")
         End If
 
         If emailSql = email And passSql = pass Then
+            ' --- HADS21-USUARIOS (USERS) ---
+            'If dReader.Item("Confirmado") = True Then
+            ' --- AZURE (Usuarios) ---
             If dReader.Item("confirmado") = True Then
                 Return True
             Else

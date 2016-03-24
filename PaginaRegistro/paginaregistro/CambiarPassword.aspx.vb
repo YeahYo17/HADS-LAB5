@@ -7,6 +7,9 @@
 
     Protected Sub btnCompEmail_Click(sender As Object, e As EventArgs) Handles btnCompEmail.Click
 
+        lblError.Visible = False
+        lblExito.Visible = False
+
         Dim libVb As New RegistroLibrary.LibraryVB
 
         Dim preg As String = "Vacio"
@@ -24,6 +27,11 @@
             btnCompRes.Visible = True
 
             validResSec.Visible = True
+
+            txtEmailCP.Enabled = False
+
+        Else
+            lblError.Visible = True
         End If
 
         libVb.Desconectar()
@@ -31,6 +39,10 @@
     End Sub
 
     Protected Sub btnCompRes_Click(sender As Object, e As EventArgs) Handles btnCompRes.Click
+
+        lblError.Visible = False
+        lblExito.Visible = False
+
 
         Dim libVb As New RegistroLibrary.LibraryVB
 
@@ -45,6 +57,11 @@
 
             validPass1.Visible = True
             validPass2.Visible = True
+
+            txtRespuestaCP.Enabled = False
+
+        Else
+            lblError.Visible = True
         End If
 
         libVb.Desconectar()
@@ -52,6 +69,9 @@
     End Sub
 
     Protected Sub btnCambiar_Click(sender As Object, e As EventArgs) Handles btnCambiar.Click
+
+        lblError.Visible = False
+        lblExito.Visible = False
 
         Dim libVb As New RegistroLibrary.LibraryVB
 
@@ -61,8 +81,15 @@
             lblExito.Text = "Password cambiado correctamente!"
             lblExito.Visible = True
 
+            lblError.Visible = True
             lblError.Text = "COMPLETADO - Se le redirigirá a la pagina de Inicio en 3 segundos."
             Response.AddHeader("REFRESH", "3;URL=Inicio.aspx")
+
+            txtPass1.Enabled = False
+            txtPass2.Enabled = False
+
+        Else
+            lblError.Visible = True
         End If
 
         libVb.Desconectar()

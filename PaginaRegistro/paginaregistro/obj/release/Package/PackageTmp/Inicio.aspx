@@ -10,7 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 425px">
+    <div style="height: 450px">
     
         <uc1:CabeceraInicio ID="CabeceraInicio1" runat="server" />
     
@@ -65,7 +65,7 @@
         <br />
     
         <br />
-        <asp:Label ID="lblError" runat="server" style="font-size: x-large; color: #FF0000; z-index: 1; left: 90px; top: 395px; position: absolute;"></asp:Label>
+        <asp:Label ID="lblError" runat="server" style="font-size: x-large; color: #FF0000; z-index: 1; left: 90px; top: 415px; position: absolute;"></asp:Label>
     
     </div>
     </form>
